@@ -11,8 +11,9 @@
         android:layout_width="218dp"
         android:layout_height="30dp"
         android:layout_marginTop="32dp"
-        android:hint="Введите дистанцию, м"
-        android:textSize="20sp"
+        android:gravity="center"
+        android:hint="Введите время"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,9 +25,9 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:hint="Введите темп"
-        app:layout_constraintEnd_toEndOf="@+id/distanceFromView"
-        app:layout_constraintStart_toStartOf="@+id/distanceFromView"
-        app:layout_constraintTop_toBottomOf="@+id/distanceFromView" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextSecFT"
+        app:layout_constraintStart_toStartOf="@+id/editTextHoursFT"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMinFT" />
 
     <EditText
         android:id="@+id/minPaceFromView"
@@ -54,20 +55,52 @@
         android:id="@+id/buttonCalculateDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="CALC DISTANCE"
-        app:layout_constraintEnd_toEndOf="@+id/secPaceFromView"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/minPaceFromView"
+        app:layout_constraintEnd_toEndOf="@+id/resultDistance"
+        app:layout_constraintStart_toStartOf="@+id/resultDistance"
         app:layout_constraintTop_toBottomOf="@+id/resultDistance" />
 
     <EditText
-        android:id="@+id/resultDistance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:id="@+id/editTextHoursFT"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="hrs"
         android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/distanceFromView"
+        app:layout_constraintTop_toBottomOf="@+id/distanceFromView" />
+
+    <EditText
+        android:id="@+id/editTextMinFT"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="min"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSecFT"
+        app:layout_constraintStart_toEndOf="@+id/editTextHoursFT"
+        app:layout_constraintTop_toBottomOf="@+id/distanceFromView" />
+
+    <EditText
+        android:id="@+id/editTextSecFT"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="sec"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/distanceFromView"
+        app:layout_constraintTop_toBottomOf="@+id/distanceFromView" />
+
+    <TextView
+        android:id="@+id/resultDistance"
+        android:layout_width="155dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center|center_horizontal"
         app:layout_constraintEnd_toEndOf="@+id/secPaceFromView"
         app:layout_constraintStart_toStartOf="@+id/minPaceFromView"
         app:layout_constraintTop_toBottomOf="@+id/minPaceFromView" />
